@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_EDIT_DRUG_TITLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:text="@string/edit_drug_interface"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/IV_drugImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_EDIT_DRUG_TITLE"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/druglogo"
+            android:contentDescription="@string/drug_image"
+            tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+        <!-- and the key and ID -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/keyID_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_EDIT_DRUG_TITLE"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/IV_drugImage">
+
+            <TextView
+                android:id="@+id/tv_drugKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_drugID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_drugImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Name layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugNameEdit_layout"
+            android:layout_below="@id/IV_drugImage"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/edt_Edit_DrugName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/admin_Edt_please_enter_drug_name"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Brand layout-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugBrandEdit_layout"
+            android:layout_below="@id/drugNameEdit_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_BrandText"
+                android:text="@string/Adm_drug_brand_Text"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_BrandLabel"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                android:id="@+id/sp_Edit_DrugBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Description layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDrugDescription_layout"
+            android:layout_width="383dp"
+            android:layout_height="160dp"
+            android:layout_below="@id/drugBrandEdit_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/edt_drugDescription"
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:layout_margin="10dp"
+                android:hint="@string/Adm_please_enter_drug_description"
+                android:importantForAutofill="no"
+
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Delivery Types -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDelivery_Layout"
+            android:layout_below="@id/drugDrugDescription_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_DrugDeliveryText"
+                android:text="@string/drug_delivery_types_Adm"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_DrugDeliveryTypeLabel"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <Spinner
+                android:id="@+id/sp_Adm_Edit_DrugDeliveryTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Medicine Types -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugMedicine_layout"
+            android:layout_below="@id/drugDelivery_Layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_MedicineText"
+                android:text="@string/drug_Adm_medicine_types"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_MedicineTypeLabel"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <Spinner
+                android:id="@+id/sp_Adm_Edit_MedicineTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Price -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDrugPrice_layout"
+            android:layout_below="@id/drugMedicine_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_drugDPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/edt_Adm_drug_price"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Quantity-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDrugQuantity_layout"
+            android:layout_below="@id/drugDrugPrice_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_drugQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/edt_Adm_drug_quantity"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Drug Supplier-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugSupplier_layout"
+            android:layout_below="@id/drugDrugQuantity_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_SupplierText"
+                android:text="@string/adm_drug_medicine_supplier"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_SupplierLabel"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <Spinner
+                android:id="@+id/sp_Adm_Edit_Supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Drug Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDrugDate_layout"
+            android:layout_below="@id/drugSupplier_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_drugDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/adm_edt_manufacture_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Expiry layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDrugExpiryDate_layout"
+            android:layout_below="@id/drugDrugDate_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_drugExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/edt_Adm_please_enter_the_expiry_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Edit and update Button-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/btnEditDelete_layout"
+            android:layout_below="@id/drugDrugExpiryDate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <Button
+                android:id="@+id/btn_AdminEditButton"
+                android:layout_margin="10dp"
+                android:text="@string/Admin_btn_edit_drug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_AdminDeleteButton"
+                android:layout_margin="10dp"
+                android:text="@string/Admin_Drug_remove_drug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </RelativeLayout>
+</ScrollView>

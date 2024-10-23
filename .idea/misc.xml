@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/admdrugedit.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/admineditprofile.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/adminnotificationlist.xml" value="0.1793478260869565" />
+        <entry key="app/src/main/res/layout/adminorderlistlayout.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/adminorderpage.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/adminpage.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/layout/adminuserlistviewlayoutinterface.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/adminuserview.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/adminviewprofile.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/layout/drugform.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/drugviewinterface.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/editprofile.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/myorderlist.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/myorderproduct.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/notificationlayout.xml" value="0.1793478260869565" />
+        <entry key="app/src/main/res/layout/ordermanagment.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/registerationform.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/usereditprofile.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/userorderlistinterface.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/userorderpage.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/userpage.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/userproductlistlayout.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/userproductpage.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/viewdrug.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/viewprofile.xml" value="0.19427083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

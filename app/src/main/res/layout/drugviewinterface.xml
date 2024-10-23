@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/purple_700">
+
+
+    <!--product image-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productImage_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/gray88"
+            android:contentDescription="@string/product_image"
+            android:src="@drawable/druglogo"
+            tools:ignore="ImageContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- productID -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productID_layout"
+        android:layout_toEndOf="@id/productImage_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_productID_label"
+            android:textColor="@color/teal_700"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_id" />
+
+        <TextView
+            android:id="@+id/tv_productID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- product name -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productName_layout"
+        android:layout_toEndOf="@id/productImage_layout"
+        android:layout_below="@id/productID_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_productName_label"
+            android:textColor="@color/teal_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_name"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_productName"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- product Description -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productDescription_layout"
+        android:layout_toEndOf="@id/productImage_layout"
+        android:layout_below="@id/productName_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_productDescription_label"
+            android:textColor="@color/teal_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_description"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_productDescription"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--PRODUCT PRICE-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productPrice_layout"
+        android:layout_toEndOf="@id/productImage_layout"
+        android:layout_below="@id/productDescription_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_productPrice_label"
+            android:textColor="@color/teal_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_price"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_productPrice"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--PRODUCT QUANTITY AVAILABLE-->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/productQuantity_layout"
+    android:layout_toEndOf="@id/productImage_layout"
+    android:layout_below="@id/productPrice_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/tv_productQuantity_label"
+        android:textColor="@color/teal_700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_quantity"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_productQuantity"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+</com.google.android.material.textfield.TextInputLayout>
+
+
+
+</RelativeLayout>

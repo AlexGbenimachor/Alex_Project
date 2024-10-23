@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_700"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/my_orderImage_productLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="8dp">
+        <ImageView
+            android:id="@+id/my_orderImage_product"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:contentDescription="@string/drugProductImage"
+            android:src="@drawable/druglogo"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/myOrderID_tvText"
+        android:layout_width="match_parent"
+        android:background="#800000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+        android:layout_below="@id/my_orderImage_productLayout"
+        android:text="orderID:"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/myOrderUsrID_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#800000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_below="@id/myOrderID_tvText"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="UserID:"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/myOrderDrugID_tvText"
+        android:layout_width="match_parent"
+        android:background="#800000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myOrderUsrID_tvText"
+        android:layout_margin="10dp"
+        android:text="DrugID:"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/myOrder_DrugNameText"
+        android:text="DrugName"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="#800000"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/myOrderDrugID_tvText"/>
+
+    <TextView
+        android:id="@+id/myOrderQtyID_tvText"
+        android:text="Quantity:"
+        android:background="#800000"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/myOrder_DrugNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/myOrderPriceID_tvText"
+        android:text="Price:"
+        android:background="#800000"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/myOrderQtyID_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/myOrdertotalID_tvText"
+        android:text="Total:"
+        android:background="#800000"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/myOrderPriceID_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/myOrderStatusID_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#800000"
+        android:textStyle="bold"
+        android:layout_below="@id/myOrdertotalID_tvText"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="Status:"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/myOrderdestination_tvText"
+        android:text="Destination:"
+        android:textColor="@color/white"
+        android:background="#800000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/myOrderStatusID_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/myOrderDate_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myOrderdestination_tvText"
+        android:layout_margin="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#800000"
+        android:text="OrderedDate"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

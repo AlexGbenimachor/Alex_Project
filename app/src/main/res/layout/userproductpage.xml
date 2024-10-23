@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <EditText
+
+            android:id="@+id/edt_searchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/please_enter_the_name_of_the_product"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="@color/purple_700"
+            android:textSize="11sp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+
+        <!-- list drug -->
+
+        <ListView
+            android:id="@+id/listDrug_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/edt_searchText"
+            android:layout_margin="10dp"
+            tools:ignore="NestedScrolling" />
+
+
+
+
+    </RelativeLayout>

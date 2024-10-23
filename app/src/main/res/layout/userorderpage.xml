@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_EDIT_DRUG_TITLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        android:text="MY CART"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+       <EditText
+           android:id="@+id/userTv_search"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/tv_EDIT_DRUG_TITLE"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:hint="please enter  product name"
+           android:importantForAutofill="no"
+           android:inputType="text"
+           tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+       <ListView
+           android:id="@+id/orderListView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/userTv_search"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:divider="@color/white"
+           android:dividerHeight="10px"
+           android:nestedScrollingEnabled="true" />
+    <TextView
+        android:id="@+id/Tv_text_total"
+        android:text="Total"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:layout_below="@id/orderListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+   </RelativeLayout>
+</ScrollView>

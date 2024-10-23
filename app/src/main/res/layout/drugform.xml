@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- title layout-->
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/title_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/DrugTitle"
+                android:text="@string/adm_add_drug_form"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:background="@color/black"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drug Image-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/image_layout"
+            android:layout_below="@id/title_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/drugImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/druglogo"
+                android:contentDescription="@string/drug_image"
+                tools:ignore="ImageContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Drug ID-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugID_layout"
+            android:layout_below="@id/image_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/admAddDrug_edt_drugID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Drug Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugName_layout"
+            android:layout_below="@id/drugID_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_drugName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adm_enter_drug_name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Drug Description-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/drugDescription_layout"
+            android:layout_below="@id/drugName_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_drugDescription"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:hint="@string/adm_enter_drug_description"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Spinner  Drug Types-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/DrugTypes_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/drugDescription_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tv_spinner_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="Select Drug Types:"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/admDrugAdd_sp_DrugTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Spinner for the Brand Details-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/BrandDetails_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/DrugTypes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tv_brand_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="@string/adm_Spinner_select_drug_brand"
+                android:textAlignment="center"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/admAddDrug_sp_brandText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Quantity in Stock -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Quantity_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/BrandDetails_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_quantityStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adm_enter_the_product_quantity"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Spinner for the Drug Delivery(Medicine Types) Details-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/DrugDrugType_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Quantity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Tv_DrugDelivery_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="@string/adm_select_drug_delivery"
+                android:textAlignment="center"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/admAddDrug_sp_DrugDeliveryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--price per medicine -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceMedicine_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/DrugDrugType_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_priceMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adm_enter_product_price"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Manufacture Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ManDate_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/priceMedicine_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_ManufactureDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adm_enter_drug_manufacture_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Expiry Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ExpiryDate_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/ManDate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/admAddDrug_edt_ExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adm_enter_drug_expiry_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Supplier Population Spinner-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SupplierID_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/ExpiryDate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Tv_supplier_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="@string/adm_tv_select_supplier"
+                android:textAlignment="center"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/admAddDrug_sp_SuppliersPop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button Add Drugs-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AddDrugs_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/SupplierID_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_AddDrugs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adm_add_drugs"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/btn_Back"
+                android:text="@string/adm_button_back"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

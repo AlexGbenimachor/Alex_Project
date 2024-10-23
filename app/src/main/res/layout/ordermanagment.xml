@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+   <ImageView
+       android:id="@+id/mycartImage"
+       android:layout_marginLeft="10dp"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_marginTop="100dp"
+       android:src="@drawable/mycart"/>
+
+    <Button
+        android:id="@+id/btnOpenCart"
+        android:layout_width="300dp"
+        android:layout_height="104dp"
+        android:layout_marginRight="10dp"
+        android:text="My Cart"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@id/mycartImage" />
+
+
+
+    <ImageView
+        android:id="@+id/myorderImage"
+        android:layout_marginLeft="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/mycartImage"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/orderbutton"/>
+
+    <Button
+        android:id="@+id/btnOpenOrder"
+        android:layout_width="300dp"
+        android:layout_height="104dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Open My Order"
+        android:layout_below="@id/btnOpenCart"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@id/myorderImage" />
+
+
+</RelativeLayout>

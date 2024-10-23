@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userProfile_title"
+            android:background="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_Title"
+                android:textAlignment="center"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:text="User Edit Page"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- user image-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/imageProfile_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/userProfile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/usrEdit_imageProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/admin_showProfileImage"
+                android:src="@drawable/userslogo"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--user email Address-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailAddress_layout"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageProfile_layout">
+            <TextView
+                android:text="@string/admin_email_address"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/tv_usrEditEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Enter your Email Address"
+                android:textStyle="italic"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- full name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullname_layout"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/emailAddress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_full_name"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/Edttv_usrEditfullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textStyle="italic"
+                android:hint="Please Enter your Full Name"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Gender -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gender_layout"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullname_layout"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:text="@string/admin_user_gender"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/Edttv_usrEditgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Please Select Gender"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <Spinner
+                android:id="@+id/spEdt_usrEditGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date of Birth -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dob_layout"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/gender_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_date_of_birth"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/Edttv_usrEditDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint ="Please Enter Date of Birth"
+                android:inputType="date"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Country -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/country_layout"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_below="@id/dob_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_country"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/EdTtv_usrEditcountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:hint="Please Select Your Country of Stay"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <Spinner
+                android:id="@+id/spEdt_usrEditCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- State -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/country_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_state"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/EdTtv_usrEditState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter your State"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Address_layout"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_below="@id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_residential_address"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/EdTtv_usrEditAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter your Address"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- User Roles -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userType_layout"
+            android:background="@color/black"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/admin_role"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/EdTtv_usrEditRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select user Roles"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/spEdt_usrEditRoles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!-- Button Update, Back -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/button_layout"
+            android:layout_below="@id/userType_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnEdt_adminUpdate"
+                android:text="@string/admin_update_profile"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnEdt_adminDelete"
+                android:text="@string/admin_delete_profile"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btn_BACK"
+                android:text="@string/back"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

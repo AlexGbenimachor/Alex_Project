@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:background="@color/purple_700"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/adminuserimageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/admin_user_ImageView"
+        android:src="@drawable/userslogo" />
+
+    <TextView
+        android:id="@+id/tv_usrkeyID"
+        android:layout_toEndOf="@id/adminuserimageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_admUsrNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_usrkeyID"
+        android:layout_toEndOf="@id/adminuserimageview"
+        android:text="@string/full_name_admUsr"
+        android:textColor="@color/teal_700"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_admUsrFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_admUsrNameLabel"
+        android:layout_toEndOf="@id/adminuserimageview"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_AdmEditUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adminuserimageview"
+       android:layout_margin="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="@string/edit_adm_button"
+        android:textColor="@color/teal_700"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_AdmDeleteUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/adminuserimageview"
+        android:layout_toEndOf="@id/btn_AdmEditUsername"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="@string/delete_adm_user"
+        android:textColor="@color/teal_700"
+        tools:ignore="TextContrastCheck" />
+
+
+</RelativeLayout>

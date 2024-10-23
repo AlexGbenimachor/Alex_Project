@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="93dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/pharmacy_logo"
+        android:src="@drawable/pharmacylogo" />
+
+    <TextView
+        android:id="@+id/imageTextView"
+        android:layout_width="285dp"
+        android:layout_height="66dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/imageLogo"
+        android:background="@color/black"
+        android:fontFamily="cursive"
+        android:text="@string/user_page"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="TextContrastCheck" />
+    <!-- User Profile-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageTextView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/user_imgView_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/profileImage"
+            android:src="@drawable/profileimage"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_useridLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_id"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_NameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_User_ViewProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/view_profile"
+            android:textAlignment="center"
+            android:textSize="11sp"
+            android:textColor="@color/teal_700"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ORDER Management-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderManagment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageTextView"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/profile_layout">
+
+        <ImageView
+            android:id="@+id/userorderLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/order_logo"
+            android:src="@drawable/orderpage"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_userOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/order_management_button"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Drug Management -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DrugManagment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/img_drugLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/medicineLogo"
+            android:src="@drawable/druglogo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_ViewUsersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/drugs"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- SETTINGS -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderManagment_layout"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/DrugManagment_layout">
+
+        <ImageView
+            android:id="@+id/img_SettingLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/settings_logo"
+            android:src="@drawable/settings"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_UserSettingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="@string/settings_button"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Logout Button-->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DrugManagment_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/logout"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</RelativeLayout>
+</ScrollView>

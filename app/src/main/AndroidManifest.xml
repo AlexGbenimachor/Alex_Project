@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pharmacyprojects">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PharmacyProjects">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Administrator Page -->
+        <activity android:name=".adminpage" android:parentActivityName=".MainActivity"/>
+        <!-- adminpage to admViewProfile -->
+        <activity android:name=".adminViewProfile" android:parentActivityName=".adminpage"/>
+        <!-- move from the mainpage to the userpage -->
+        <activity android:name=".userpage" android:parentActivityName=".MainActivity"/>
+        <!-- from userpage to  view user profile page-->
+        <activity android:name=".viewprofile" android:parentActivityName=".userpage"/>
+        <!-- from admin page to drug management-->
+        <activity android:name=".viewDrug" android:parentActivityName=".adminpage"/>
+        <!-- from admin page to user management view profile-->
+        <activity android:name=".adminListUserView" android:parentActivityName=".adminpage"/>
+        <!--from selected drug to edit delete drug interface -->
+        <activity android:name=".admineditDrug" android:parentActivityName=".viewDrug"/>
+        <!-- move from login to signup -->
+        <activity android:name=".registerUser" android:parentActivityName=".MainActivity"/>
+        <!-- move from view drug to add drug form-->
+        <activity android:name=".drugform" android:parentActivityName=".viewDrug"/>
+        <!--userpage to productpage -->
+        <activity android:name=".userproductpage" android:parentActivityName=".userpage"/>
+        <!-- userpage to  ordermanagement-->
+        <activity android:name=".ordermanagement" android:parentActivityName=".userpage"/>
+        <activity android:name=".myorderProduct" android:parentActivityName=".ordermanagement"/>
+        <activity android:name=".usercartpage" android:parentActivityName=".ordermanagement"/>
+
+        <!-- adminlistview to admineditprofile  -->
+        <activity android:name=".admineditprofile" android:parentActivityName=".adminListUserView"/>
+        <activity android:name=".adminNotification" android:parentActivityName=".adminpage"/>
+
+
+    </application>
+
+</manifest>

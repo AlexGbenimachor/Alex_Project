@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/pharmacy_logo"
+        android:src="@drawable/pharmacylogo" />
+
+    <TextView
+        android:id="@+id/imageTextView"
+        android:layout_width="308dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/imageLogo"
+        android:background="@color/black"
+        android:fontFamily="cursive"
+        android:text="@string/pharmacy"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="TextContrastCheck" />
+
+
+    <EditText
+        android:id="@+id/edt_EmailAddress"
+        android:layout_width="375dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/imageTextView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="@color/violet"
+        android:hint="@string/please_enter_your_email_address"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/edt_Password"
+        android:layout_width="375dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/edt_EmailAddress"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/please_enter_your_password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColorHint="@color/violet"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/sp_UserRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_Password"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sp_UserRole"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="cursive"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/signupnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btnLogin"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="-119dp"
+        android:text="@string/not_registered"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_btnsignup"
+        android:layout_width="120dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/sp_UserRole"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="148dp"
+        android:layout_toEndOf="@id/signupnote"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:linksClickable="true"
+        android:minHeight="48dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+
+</RelativeLayout>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!-- title Page -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titlePage_layout"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/pageTitle"
+                android:text="SIGN UP TO ORDER PRODUCT AND ENJOY SPECIAL PROMOS"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- profile image -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/image_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/titlePage_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/reg_imagView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/userslogo"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="profile Image" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- USER ID-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userID_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_userID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/user_id"
+                android:textColorHint="@color/purple_200"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Name_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/userID_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/full_name"
+                android:textColorHint="@color/pink"
+                android:inputType="text"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Gender -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gender_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Tv_spinner_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="Select Gender:"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/reg_sp_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Date_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/gender_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="Data of Birth"
+                android:textColorHint="@color/purple_200"
+                android:inputType="date"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Country -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/country_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tv_spinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="Select Country:"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+            <Spinner
+                android:id="@+id/reg_sp_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- State -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/State_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/country_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_State"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="State of Residence"
+                android:textColorHint="@color/pink"
+                android:inputType="text"
+                android:textAlignment="center"
+
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Phone Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/State_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="Phone Number"
+                android:textColorHint="@color/pink"
+                android:inputType="phone"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Address Layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Address_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="Enter your Residential Address"
+                android:textColorHint="@color/pink"
+                android:inputType="text"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Address Layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Email_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="@string/email_address"
+                android:textColorHint="@color/pink"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- password Layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/Email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/reg_edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="Enter Your Password"
+                android:textColorHint="@color/pink"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- confirm password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmpassword_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/edt_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:hint="Confirm Your Password"
+                android:textColorHint="@color/pink"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- User Roles-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userRole_layout"
+            android:layout_below="@id/confirmpassword_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tv_spinner_usrRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:text="Select User Role:"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/reg_sp_usRoles"
+                android:layout_margin="10dp"
+                android:hint="Select User Role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <!-- Button Add User  -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/btnadduser_layout"
+            android:layout_margin="10dp"
+            android:layout_below="@id/userRole_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnAdduser"
+                android:text="Sign Up"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+           </RelativeLayout>
+
+</ScrollView>
